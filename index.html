@@ -154,6 +154,320 @@
     box-shadow: 0 6px 18px rgba(0, 95, 189, 0.24);
   }
 
+
+  /* MOBILE RESPONSIVE EDITING VIEW
+     This affects only the on-screen experience. PDF export keeps the locked A4
+     two-page design from the @media print rules below. */
+  @media screen and (max-width: 900px) {
+    html {
+      width: 100%;
+      overflow-x: hidden;
+      background: #E8EEF5;
+    }
+
+    body {
+      width: 100%;
+      min-width: 0;
+      overflow-x: hidden;
+      background: #E8EEF5;
+      padding: 12px 8px 86px;
+      font-size: 14px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 760px;
+      min-height: auto;
+      margin: 0 auto 16px;
+      border-radius: 14px;
+      box-shadow: 0 10px 28px rgba(45, 50, 56, 0.16);
+      overflow: hidden;
+      page-break-after: auto;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 14px 14px;
+      text-align: center;
+    }
+
+    .header-logo-block {
+      order: 1;
+      justify-content: center;
+    }
+
+    .header-logo {
+      width: 56px;
+      height: 56px;
+    }
+
+    .header-title {
+      order: 2;
+      position: static;
+      left: auto;
+      transform: none;
+      white-space: normal;
+      width: 100%;
+      text-align: center;
+    }
+
+    .report-title-ar {
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .report-title-en {
+      font-size: 10px;
+      letter-spacing: 0.8px;
+    }
+
+    .header-company {
+      order: 3;
+      width: 100%;
+      text-align: center;
+    }
+
+    .company-name {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .company-reg {
+      font-size: 10px;
+    }
+
+    .header-bar::before,
+    .header-bar::after {
+      width: 32px;
+    }
+
+    .page-body {
+      padding: 12px;
+      gap: 12px;
+    }
+
+    .section {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .section-header {
+      padding: 10px 12px;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .section-num {
+      width: 25px;
+      height: 25px;
+      font-size: 12px;
+    }
+
+    .section-body {
+      padding: 12px;
+      overflow-x: auto;
+    }
+
+    .form-grid,
+    .form-grid-3,
+    .equipment-grid {
+      grid-template-columns: 1fr;
+      gap: 11px;
+    }
+
+    .form-group {
+      gap: 5px;
+    }
+
+    .form-label,
+    .equipment-sub-label {
+      font-size: 12px;
+    }
+
+    .sub-label {
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .equipment-item input,
+    .work-plan-item input,
+    .summary-item input,
+    .sign-table td input,
+    .data-table td input {
+      font-size: 16px;
+      min-height: 42px;
+      line-height: 1.4;
+    }
+
+    .form-input,
+    .form-textarea {
+      padding: 9px 10px;
+    }
+
+    .form-textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+
+    .checkbox-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 9px;
+      padding-top: 10px;
+    }
+
+    .checkbox-item {
+      width: 100%;
+      white-space: normal;
+      font-size: 13px;
+      line-height: 1.5;
+      padding: 8px 10px;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+    }
+
+    .data-table,
+    .sign-table {
+      min-width: 560px;
+    }
+
+    .data-table th,
+    .sign-table th {
+      font-size: 12px;
+      padding: 8px;
+    }
+
+    .data-table td input {
+      height: 42px;
+    }
+
+    .equipment-item {
+      min-height: 48px;
+      padding: 9px 10px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .equipment-item-label {
+      font-size: 12px;
+      white-space: normal;
+    }
+
+    .equip-sep {
+      height: 22px;
+    }
+
+    .work-plan {
+      gap: 9px;
+    }
+
+    .work-plan-item {
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .work-plan-num {
+      width: 26px;
+      height: 26px;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .summary-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .summary-row > div[style*="width:1px"] {
+      display: none !important;
+    }
+
+    .summary-item {
+      width: 100%;
+      align-items: stretch;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .summary-item label {
+      font-size: 12px;
+    }
+
+    .diagram-area {
+      min-height: 150px !important;
+    }
+
+    .diagram-area .placeholder-text {
+      font-size: 12px;
+      padding: 0 14px;
+      text-align: center;
+    }
+
+    .diagram-area textarea {
+      font-size: 16px;
+      padding: 12px;
+    }
+
+    .footer {
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      padding: 10px 12px;
+      text-align: center;
+    }
+
+    .footer-page,
+    .footer-brand {
+      font-size: 10px;
+    }
+
+    .export-toolbar {
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      justify-content: center;
+      padding: 8px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(217, 222, 227, 0.9);
+      box-shadow: 0 12px 30px rgba(45, 50, 56, 0.18);
+      backdrop-filter: blur(10px);
+    }
+
+    .export-pdf-btn {
+      width: 100%;
+      min-height: 48px;
+      font-size: 15px;
+      padding: 13px 18px;
+    }
+  }
+
+  @media screen and (min-width: 901px) and (max-width: 1180px) {
+    body {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .page {
+      width: min(100%, 210mm);
+    }
+  }
+
   @page {
     size: A4 portrait;
     margin: 0;
